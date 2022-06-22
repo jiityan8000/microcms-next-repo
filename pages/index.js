@@ -1,18 +1,38 @@
 import Link from "next/link";
 import { client } from "../libs/client";
+import styled from 'styled-components';
 
 export default function Home({ blog }) {
+
+  const ArticleList = styled.ul`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 20px 0;
+    list-style: none;
+  `
+
+  const ArticleItem = styled.li`
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #f2f2f2;
+  `
+
   return (
     <div>
-      <ul>
+      <ArticleList>
         {blog.map((blog) => (
-          <li key={blog.id}>
+          <ArticleItem key={blog.id}>
             <Link href={`/blog/${blog.id}`}>
               <a>{blog.title}</a>
             </Link>
-          </li>
+          </ArticleItem>
         ))}
-      </ul>
+      </ArticleList>
     </div>
   );
 }
