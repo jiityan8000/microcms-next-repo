@@ -8,7 +8,7 @@ export default function Home({ blog }) {
     width: 100%;
     max-width: 940px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 40px 20px;
     list-style: none;
   `
 
