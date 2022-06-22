@@ -5,12 +5,10 @@ import styled from 'styled-components';
 export default function Home({ blog }) {
 
   const ArticleList = styled.ul`
-    display: flex;
-    justify-content: center;
     width: 100%;
     max-width: 940px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 40px 0;
     list-style: none;
   `
 
