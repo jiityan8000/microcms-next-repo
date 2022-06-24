@@ -1,16 +1,29 @@
 import Link from "next/link";
 import { client } from "../libs/client";
 import styled, { createGlobalStyle } from 'styled-components';
+import Header from "../src/component/Header";
 
 const GlobalStyle = createGlobalStyle`
   body {
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
     background: #262E45;
+    color: #fff;
+    font-family: futura-pt,'Noto Sans JP', sans-serif;
   }
+
   a {
     color: #E6E6E6;
   }
 `
 export default function Home({ blog }) {
+
+  const Main = styled.main`
+    flex: 1;
+    width: 1120px;
+    margin: 0 auto 60px;
+  `
 
   const ArticleList = styled.ul`
     display: flex;
@@ -51,16 +64,18 @@ export default function Home({ blog }) {
 
   return (
     <div>
-
-      <ArticleList>
-        {blog.map((blog) => (
-          <ArticleItem key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <ArticleItemLink><ArticleItemName>{blog.title}</ArticleItemName></ArticleItemLink>
-            </Link>
-          </ArticleItem>
-        ))}
-      </ArticleList>
+      <Header />
+      <Main>
+        <ArticleList>
+          {blog.map((blog) => (
+            <ArticleItem key={blog.id}>
+              <Link href={`/blog/${blog.id}`}>
+                <ArticleItemLink><ArticleItemName>{blog.title}</ArticleItemName></ArticleItemLink>
+              </Link>
+            </ArticleItem>
+          ))}
+        </ArticleList>
+      </Main>
     </div>
   );
 }
