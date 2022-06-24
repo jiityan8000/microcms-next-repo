@@ -1,22 +1,8 @@
 import Link from "next/link";
 import { client } from "../libs/client";
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import Header from "../src/component/Header";
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
-    background: #262E45;
-    color: #fff;
-    font-family: futura-pt,'Noto Sans JP', sans-serif;
-  }
-
-  a {
-    color: #E6E6E6;
-  }
-`
 export default function Home({ blog }) {
 
   const Main = styled.main`
@@ -37,11 +23,6 @@ export default function Home({ blog }) {
   `
 
   const ArticleItem = styled.li`
-    font-size: 16px;
-    font-weight: bold;
-    padding-bottom: 32px;
-    margin-bottom: 32px;
-    border-bottom: 1px solid #f2f2f2;
   `
 
   const ArticleItemLink = styled.a`
@@ -60,6 +41,7 @@ export default function Home({ blog }) {
     height: 75px;
     padding: 0 30px;
     font-size: 24px;
+    color: #E6E6E6;
   `
 
   return (
