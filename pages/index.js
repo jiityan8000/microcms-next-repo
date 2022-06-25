@@ -28,7 +28,7 @@ export default function Home({ blog }) {
     }
   `
 
-  const ArticleItemLink = styled.a`
+  const ArticleItemInner = styled.span`
     display: block;
     width: 520px;
     border: 2px solid #fff;
@@ -36,13 +36,16 @@ export default function Home({ blog }) {
     box-sizing: content-box;
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .16));
     transition: 0.3s;
+    &:hover {
+      filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+      transform: scale(0.98);
+    }
   `
 
   const ArticleItemName = styled.span`
     display: flex;
-    align-items: center;
     height: 75px;
-    padding: 0 30px;
+    padding: 10px 30px;
     font-size: 24px;
     color: #E6E6E6;
   `
@@ -56,7 +59,7 @@ export default function Home({ blog }) {
             <ArticleItem key={blog.id}>
               <Link href={`/blog/${blog.id}`}>
                 <a>
-                  <ArticleItemLink><ArticleItemName>{blog.title}</ArticleItemName></ArticleItemLink>
+                  <ArticleItemInner><ArticleItemName>{blog.title}</ArticleItemName></ArticleItemInner>
                 </a>
               </Link>
             </ArticleItem>
