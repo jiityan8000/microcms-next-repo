@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-flow: column;
     min-height: 100vh;
+    margin: 0;
     background: #262E45;
     color: #fff;
     font-family: futura-pt,'Noto Sans JP', sans-serif;

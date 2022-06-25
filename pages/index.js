@@ -18,11 +18,14 @@ export default function Home({ blog }) {
     flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 0;
     list-style: none;
   `
 
   const ArticleItem = styled.li`
+    &:not(:nth-last-child(-n+2)){
+      margin-bottom: 50px;
+    }
   `
 
   const ArticleItemLink = styled.a`
@@ -52,7 +55,9 @@ export default function Home({ blog }) {
           {blog.map((blog) => (
             <ArticleItem key={blog.id}>
               <Link href={`/blog/${blog.id}`}>
-                <ArticleItemLink><ArticleItemName>{blog.title}</ArticleItemName></ArticleItemLink>
+                <a>
+                  <ArticleItemLink><ArticleItemName>{blog.title}</ArticleItemName></ArticleItemLink>
+                </a>
               </Link>
             </ArticleItem>
           ))}
