@@ -16,7 +16,7 @@ export default function Header() {
 
     const TitleLink = styled.a`
         color: #E6E6E6;
-        &::before {
+        ::before {
             content: "";
             display: inline-block;
             background: #fff;
