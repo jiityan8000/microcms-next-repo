@@ -14,9 +14,8 @@ export default function Header() {
         font-size: 50px;
     `
 
-    const TitleLink = styled.a`
+    const TitleLink = styled.span`
         color: #E6E6E6;
-        text-decoration: none;
         &::before {
             content: "";
             display: inline-block;

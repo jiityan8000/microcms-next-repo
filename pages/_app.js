@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     color: #E6E6E6;
+    text-decoration: none;
   }
 `
 
