@@ -33,7 +33,7 @@ export default function Header() {
         <HeaderInner>
             <Title>
                 <Link href="/">
-                    <a>Hiroki Nagai</a>
+                    <a><TitleLink>Hiroki Nagai</TitleLink></a>
                 </Link>
             </Title>
         </HeaderInner>
