@@ -2,6 +2,7 @@ import Link from "next/link";
 import { client } from "../libs/client";
 import styled from 'styled-components';
 import Header from "../src/component/Header";
+import Footer from "../src/component/Footer";
 
 export default function Home({ blog }) {
 
@@ -16,7 +17,6 @@ export default function Home({ blog }) {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    max-width: 940px;
     margin: 0 auto;
     padding: 40px 20px;
     list-style: none;
@@ -58,6 +58,7 @@ export default function Home({ blog }) {
           ))}
         </ArticleList>
       </Main>
+      <Footer />
     </div>
   );
 }
