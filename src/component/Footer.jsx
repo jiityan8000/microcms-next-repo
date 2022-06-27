@@ -6,7 +6,7 @@ export default function Footer() {
     const FooterInner = styled.footer`
         background: #191E2E;
         height: 100px;
-        ${media.lessThan("medium")`
+        ${media.lessThan("large")`
             height: 70px;
         `}
         ${media.lessThan("small")`

@@ -8,7 +8,7 @@ export default function Header() {
         display: flex;
         align-items: center;
         height: 150px;
-        ${media.lessThan("medium")`
+        ${media.lessThan("large")`
             height: 120px;
         `}
         ${media.lessThan("small")`
@@ -20,7 +20,7 @@ export default function Header() {
         width: 1120px;
         margin: 0 auto;
         font-size: 50px;
-        ${media.lessThan("medium")`
+        ${media.lessThan("large")`
             width: 90vw;
             font-size: 40px;
         `}
@@ -40,7 +40,7 @@ export default function Header() {
             height: 36px;
             margin-right: 15px;
             border-radius: 50%;
-            ${media.lessThan("medium")`
+            ${media.lessThan("large")`
                 width: 25px;
                 height: 25px;
                 margin-right: 9px;
