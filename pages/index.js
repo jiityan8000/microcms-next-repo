@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { client } from "../libs/client";
 import styled from 'styled-components';
+import media from "styled-media-query";
 import Header from "../src/component/Header";
 import Footer from "../src/component/Footer";
 
@@ -10,6 +11,13 @@ export default function Home({ blog }) {
     flex: 1;
     width: 1120px;
     margin: 0 auto 60px;
+    ${media.lessThan("medium")`
+      width: 90vw;
+    `}
+    ${media.lessThan("small")`
+      width: 300px;
+      margin: 0 auto 30px;
+    `}
   `
 
   const ArticleList = styled.ul`
@@ -20,11 +28,27 @@ export default function Home({ blog }) {
     margin: 0 auto;
     padding: 0;
     list-style: none;
+    ${media.lessThan("medium")`
+      justify-content: center;
+    `}
+    ${media.lessThan("small")`
+      width: 300px;
+      margin: 0 auto 30px;
+    `}
   `
 
   const ArticleItem = styled.li`
     &:not(:nth-last-child(-n+2)){
       margin-bottom: 50px;
+    }
+    &:not(:last-child){
+      ${media.lessThan("medium")`
+        margin-bottom: 23px;
+      `}
+      ${media.lessThan("small")`
+        width: 300px;
+        margin: 0 auto 30px;
+      `}
     }
   `
 
@@ -40,6 +64,13 @@ export default function Home({ blog }) {
       filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
       transform: scale(0.98);
     }
+    ${media.lessThan("medium")`
+        width: 90vw;
+        max-width: 500px;
+    `}
+    ${media.lessThan("small")`
+        width: 300px;
+    `}
   `
 
   const ArticleItemName = styled.span`
@@ -48,6 +79,15 @@ export default function Home({ blog }) {
     padding: 10px 30px;
     font-size: 24px;
     color: #E6E6E6;
+    ${media.lessThan("medium")`
+        height: 70px;
+        font-size: 22px;
+    `}
+    ${media.lessThan("small")`
+        height: 50px;
+        font-size: 20px;
+    `}
+
   `
 
   return (
