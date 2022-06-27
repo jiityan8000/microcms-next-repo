@@ -66,7 +66,7 @@ export default function Home({ blog }) {
     }
     ${media.lessThan("large")`
         width: 90vw;
-        max-width: 500px;
+        max-width: 530px;
     `}
     ${media.lessThan("small")`
         width: 300px;
