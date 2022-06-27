@@ -84,7 +84,6 @@ export default function Home({ blog }) {
         font-size: 22px;
     `}
     ${media.lessThan("small")`
-        height: 50px;
         font-size: 20px;
     `}
 
