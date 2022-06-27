@@ -25,7 +25,6 @@ export default function Header() {
             font-size: 40px;
         `}
         ${media.lessThan("small")`
-            width: 300px;
             font-size: 30px;
         `}
     `
