@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import Head from "next/head";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -21,6 +22,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <GlobalStyle />
+      <Head>
+        <title>Hiroki Nagai</title>
+      </Head>
       <Component {...pageProps} />
     </>
   )
